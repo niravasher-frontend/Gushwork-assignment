@@ -1,0 +1,350 @@
+/* Advanced HDPE Pipe Manufacturing Process — desktop (tabs + 2 cols): min-width 1081px; stacked + badge: max-width 1080px */
+
+.mfg-process {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.mfg-process__inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.mfg-process__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 800px;
+  text-align: center;
+}
+
+.mfg-process__title {
+  font-family: var(--font-urbanist);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0d0d0d;
+  max-width: 800px;
+}
+
+.mfg-process__subtitle {
+  max-width: 46rem;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4d545c;
+}
+
+.mfg-process__card {
+  padding: 32px;
+  border-radius: 24px;
+  background: #ffffff;
+  color: var(--color-text);
+  box-shadow: 0 16px 32px -12px rgba(88, 92, 95, 0.1);
+  border: 1px solid #cfd1d4;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.mfg-process__step-badge {
+  display: none;
+  align-self: flex-start;
+  padding: 8px 14px;
+  border-radius: 32px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #ffffff;
+  background: var(--color-navy);
+}
+
+.mfg-process__mobile-footer {
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.mfg-process__mobile-footer-line {
+  flex: 1 1 auto;
+  min-width: 8px;
+  height: 1px;
+  background: #e2e5ea;
+  align-self: center;
+}
+
+.mfg-process__nav-btn {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 10px 16px;
+  border: 1px solid #e2e5ea;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #0d0d0d;
+  background: #ffffff;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.mfg-process__nav-btn:hover:not(:disabled) {
+  border-color: #cfd1d4;
+  background: #fafbfc;
+}
+
+.mfg-process__nav-btn:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 3px;
+}
+
+.mfg-process__nav-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.mfg-process__tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0;
+  flex-shrink: 0;
+}
+
+/* Pill tabs + horizontal connector line */
+.mfg-process__tabs-track {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  min-height: 44px;
+  padding: 2px 0;
+  box-sizing: border-box;
+}
+
+.mfg-process__tabs-track::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 0;
+  height: 1px;
+  background: #e2e5ea;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.mfg-process__tab {
+  position: relative;
+  z-index: 1;
+  flex: 1 1 0;
+  min-width: 0;
+  margin: 0;
+  padding: 10px 16px;
+  border: 1px solid #e2e5ea;
+  border-radius: 999px;
+  font-family: var(--font-urbanist);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+  color: #0d0d0d;
+  background: #ffffff;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.mfg-process__tab:hover:not(.is-active) {
+  border-color: #cfd1d4;
+  background: #fafbfc;
+}
+
+.mfg-process__tab.is-active {
+  border-color: var(--color-navy);
+  background: var(--color-navy);
+  color: #ffffff;
+}
+
+.mfg-process__tab.is-active:hover {
+  background: var(--color-navy);
+  color: #ffffff;
+  border-color: var(--color-navy);
+}
+
+.mfg-process__tab:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 3px;
+}
+
+.mfg-process__body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.mfg-process__text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mfg-process__heading {
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #0d0d0d;
+  font-family: var(--font-urbanist);
+}
+
+.mfg-process__desc {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #4d545c;
+}
+
+.mfg-process__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mfg-process__list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #0d0d0d;
+}
+
+.mfg-process__list-item img {
+  flex-shrink: 0;
+  padding-top: 2px;
+  box-sizing: content-box;
+}
+
+.mfg-process__media {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #e8eaef;
+}
+
+.mfg-process__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.mfg-process__arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+
+.mfg-process__arrow:hover {
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.mfg-process__arrow:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 3px;
+}
+
+.mfg-process__arrow:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.mfg-process__arrow--prev {
+  left: 14px;
+}
+
+.mfg-process__arrow--next {
+  right: 14px;
+}
+
+.mfg-process__arrow-icon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.mfg-process__arrow--prev .mfg-process__arrow-icon {
+  transform: rotate(180deg);
+}
+
+/* Tablet / phone: same stacked layout as phone (matches manufacturing.js max-width: 1080px) */
+@media (max-width: 1080px) {
+  .mfg-process__subtitle {
+    font-size: 15px;
+  }
+
+  .mfg-process__tabs {
+    display: none;
+  }
+
+  .mfg-process__step-badge {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .mfg-process__mobile-footer {
+    display: flex;
+  }
+
+  .mfg-process__body {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .mfg-process__desc {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .mfg-process__card {
+    padding: 24px;
+    gap: 24px;
+    border-radius: 20px;
+  }
+}

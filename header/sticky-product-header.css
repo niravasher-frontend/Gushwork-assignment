@@ -1,0 +1,160 @@
+.product-sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #ffffff;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
+  transform: translateY(-100%);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  pointer-events: none;
+  padding-left: 100px;
+  padding-right: 100px;
+  box-sizing: border-box;
+}
+
+.product-sticky-header.is-visible {
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.product-sticky-header__inner {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+  box-sizing: border-box;
+}
+
+.product-sticky-header__product {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.product-sticky-header__thumb {
+  display: block;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.product-sticky-header__text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.product-sticky-header__title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: #111827;
+  display: -webkit-box;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.product-sticky-header__price {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #0d0d0d;
+}
+
+.product-sticky-header__cta {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 1600px) and (min-width: 1441px) {
+  .product-sticky-header {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1201px) {
+  .product-sticky-header {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1081px) {
+  .product-sticky-header {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+@media (max-width: 1080px) and (min-width: 801px) {
+  .product-sticky-header {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@media (max-width: 800px) {
+  .product-sticky-header {
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: none;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .product-sticky-header__inner {
+    padding: 10px 0;
+    justify-content: flex-start;
+  }
+
+  .product-sticky-header__thumb {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+  }
+
+  .product-sticky-header__title {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #1e293b;
+  }
+
+  .product-sticky-header__price {
+    font-size: 15px;
+  }
+
+  /* Must beat .hero-btn (hero.css loads after this file) */
+  .product-sticky-header .product-sticky-header__cta.hero-btn {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .product-sticky-header__inner {
+    padding: 8px 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-sticky-header {
+    transition: none;
+  }
+}

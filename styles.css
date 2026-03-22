@@ -1,0 +1,108 @@
+/* Global tokens + layout shell */
+:root {
+  --page-max-width: 1240px;
+  --page-padding-sm: 16px;
+  --page-padding-md: 24px;
+  --page-padding-lg: 100px;
+
+  --color-text: #1a1a1a;
+  --color-text-muted: #3d3d3d;
+  --color-navy: #2b3990;
+  --color-white: #ffffff;
+
+  --font-sans: "Inter", sans-serif;
+  --font-urbanist: "Urbanist", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background-color: var(--color-white);
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: transparent;
+}
+
+/* Site-wide noise texture (same asset as former hero overlay) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: url("assets/Noise.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.site-padding__section {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 100px;
+}
+
+@media (max-width: 1600px) and (min-width: 1441px) {
+  .site-padding__section {
+    padding: 100px;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1201px) {
+  .site-padding__section {
+    padding: 80px;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 1081px) {
+  .site-padding__section {
+    padding: 80px 60px;
+  }
+}
+
+@media (max-width: 1080px) and (min-width: 801px) {
+  .site-padding__section {
+    padding: 80px 48px;
+  }
+}
+
+@media (max-width: 800px) and (min-width: 360px) {
+  .site-padding__section {
+    padding: 48px 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-padding__section {
+    padding: 16px;
+  }
+}
